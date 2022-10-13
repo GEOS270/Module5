@@ -20,7 +20,8 @@ nav_order: 2
 
 # Download the Project
 
-[Download the Project!](https://github.com/June-Skeeter/Module4_GEOS270/blob/main/data/PA_Risk_Assessment.zip){: .btn .btn-blue }
+[Download the Project!](https://raw.githubusercontent.com/GEOS270/Module5/main/data/PA_Risk_Assessment.zip){: .btn .btn-blue }
+
 
 I've gotten the ball rolling for you and setup a project.  This project folder contains:
 
@@ -39,7 +40,7 @@ I've gotten the ball rolling for you and setup a project.  This project folder c
 
 # Port Alberni Data
 
-Download the [PA_Data.zip](https://github.com/June-Skeeter/Module4_GEOS270/blob/main/data/PA_Data.zip) and extract it to your PA_Risk_Assessment folder.  This folder contains:
+Download the [PA_Data.zip](https://raw.githubusercontent.com/GEOS270/Module5/main/data/PA_Data.zip) and extract it to your PA_Risk_Assessment folder.  This folder contains:
 * **Properties.shp** (properties in the city by zoning type) which you should import into the PA_Risk_Assessment_Inputs feature dataset.  
 * Two text files:
  * **ZoningCodes** is metadata for Properties.shp.  We don't need to worry about it for now.  

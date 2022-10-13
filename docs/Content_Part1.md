@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Spatial Analysis
-parent: Lecture Content
+title: Methods
+parent: Spatial Analysis
 has_children: True
 nav_order: 2
 ---

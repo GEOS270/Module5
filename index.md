@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Overview
+title: Spatial Analysis
+has_children: True
 nav_order: 1
 ---
 
@@ -10,6 +11,11 @@ This module will cover various techniques used to analyze spatial data.  We can 
 
 <img src="docs/content/images/RiskModelling.png">
 
+**Spatial Analysis**: Looking at the spatial relationships between features within one data set or overlaying multiple spatial data sets and analyzing how the interact in space.  Spatial analysis allows us to combining multiple pieces of spatial information and use it to generate new information.
+
+**GIS Workflows**: The sequence of steps we go through to conduct a GIS analysis.  From the formualtion of the idea to the final results.
+
+<!-- 
 # Deliverables
 
-Every module will be scored out of 100 pts.  For this module will be be submitting one map and a some written responses.  You will also be taking a quiz consisting of multiple choice, numeric input, fill in the blank, etc. type questions.  See the [assessment page](docs/Assessment.md).
+Every module will be scored out of 100 pts.  For this module will be be submitting one map and a some written responses.  You will also be taking a quiz consisting of multiple choice, numeric input, fill in the blank, etc. type questions.  See the [assessment page](docs/Assessment.md). -->

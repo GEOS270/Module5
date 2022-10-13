@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Workflows
-parent: Lecture Content
+parent: Spatial Analysis
 has_children: False
 nav_order: 1
 ---

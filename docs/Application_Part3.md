@@ -124,7 +124,7 @@ To answer **3**{: .label .label-red}, the process is a bit more complicated.  If
   * !COUNT_ZoneName!\*!FIRST_Population!/!FIRST_Households!
   * The above equation takes then number of properties (!COUNT_ZoneName!)
   * Multiples it by the average household size (!FIRST_Population!/!FIRST_Households!)
-    * This is just a rough estimate, obviously its flawed, and you'd want a more accurate approach if you were doing this in real life, but this is just for illustrative purposes, so its OK.
+    * **This is just a rough estimate**, *obviously its flawed*, and you'd want a more accurate approach if you were doing this in real life, but this is just for illustrative purposes, so its OK.
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rQz8SWEXxrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
