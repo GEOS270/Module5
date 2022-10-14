@@ -1,0 +1,176 @@
+I"1.<h1 class="no_toc" id="geospatial-analysis">Geospatial Analysis</h1>
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#automating-with-model-builder" id="markdown-toc-automating-with-model-builder">Automating with Model Builder</a></li>
+  <li><a href="#identify-the-inundation-zone" id="markdown-toc-identify-the-inundation-zone">Identify the Inundation Zone</a>    <ol>
+      <li><a href="#using-the-model-yourself" id="markdown-toc-using-the-model-yourself">Using the Model Yourself</a></li>
+    </ol>
+  </li>
+  <li><a href="#create-your-own-model" id="markdown-toc-create-your-own-model">Create Your Own Model</a>    <ol>
+      <li><a href="#clip-the-roads-layer" id="markdown-toc-clip-the-roads-layer">Clip the Roads Layer</a></li>
+      <li><a href="#select-properties-by-location" id="markdown-toc-select-properties-by-location">Select Properties by Location</a></li>
+      <li><a href="#select-properties-by-zonename-and-intersect-population-data" id="markdown-toc-select-properties-by-zonename-and-intersect-population-data">Select Properties by ZoneName and Intersect Population Data</a></li>
+      <li><a href="#select-shelters-by-location" id="markdown-toc-select-shelters-by-location">Select Shelters by Location</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<h1 id="automating-with-model-builder">Automating with Model Builder</h1>
+
+<p>We are going to use a tool called Model Builder to organize and save all of our analysis steps in one place.  When we use model builder, if any of our inputs or parameters change, a model can be easily adjusted and rerun at any time.  It also allows us to visualize our analysis process.  This is useful both for editing our own work and sharing it with others.</p>
+
+<ul>
+  <li>For a more detailed explanation of Model Builder, check out <a href="https://pro.arcgis.com/en/pro-app/latest/help/analysis/geoprocessing/modelbuilder/modelbuilder-quick-tour.htm">this link</a>.</li>
+</ul>
+
+<h1 id="identify-the-inundation-zone">Identify the Inundation Zone</h1>
+
+<p>Our criteria for land areas at risk for flooding are:</p>
+<ul>
+  <li>Land at or below 10 m elevation <strong>and</strong> within 1km of the coastline.</li>
+</ul>
+
+<p>I have created a model to do this part for you.  In order to identify the land areas in Port Alberni at risk for inundation, the model is set up to do four tasks:</p>
+
+<p><strong class="label label-red">1</strong> Reclassify the PA_DEM to identify all the areas under 10m elevation. See this link for info on the <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/reclassify.htm">Reclassify tool</a>.</p>
+
+<p><strong class="label label-red">2</strong> Convert the reclassified DEM to a polygon. See this link for info on the <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/conversion/raster-to-polygon.htm">Raster to Polygon Tool</a>.</p>
+
+<p><strong class="label label-red">3</strong> Buffer the waterbodies by 1km. See this link for info on the <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/buffer.htm">buffer tool</a>.</p>
+
+<p><strong class="label label-red">4</strong> Clip the coastline buffer with the inundation zone. See this link for an explanation of the <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/clip.htm">Clip tool</a>.</p>
+
+<p>Watch the video below to see how I set the model up with an explanation of what it is doing.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/evyXxnqUKbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="using-the-model-yourself">Using the Model Yourself</h2>
+
+<p><strong class="label label-blue">1</strong> Right click the InundationZone model and click “Edit”.  The model will open in a new window, next to your map.  The elevation threshold in the relassify is set to 5m, but we want to set it to 10 for our analysis.</p>
+
+<p><strong class="label label-blue">2</strong> Change the break values in the Reclassify to from 5 to 10 and run the model.</p>
+<ul>
+  <li>Right click on <strong>Reclassify</strong> in the InundationZone and select <strong>Open</strong></li>
+  <li>Change the break value to 10</li>
+</ul>
+
+<h1 id="create-your-own-model">Create Your Own Model</h1>
+
+<p>We have four questions we want to address:</p>
+
+<p><strong class="label label-red">1</strong> Which roads are at risk of flooding or damage?</p>
+
+<p><strong class="label label-red">2</strong> Which properties in the city are at risk?</p>
+
+<p><strong class="label label-red">3</strong> How many people within Port Alberni and the surrounding area are potentially living in areas at risk?</p>
+
+<p><strong class="label label-red">4</strong> Are the Tsunami Shelters sufficient?</p>
+
+<h2 id="clip-the-roads-layer">Clip the Roads Layer</h2>
+
+<p>To answer question <strong class="label label-red">1</strong> all we need to do is clip the roads by the inundation zone.  Follow the video below to create a new model and clip the roads layer.</p>
+
+<p><strong class="label label-blue">A</strong> Use the PA_Roads as the <strong>Input Feature</strong></p>
+
+<p><strong class="label label-blue">B</strong> Use the InundationZone as the <strong>Clip Feature</strong></p>
+
+<p><strong class="label label-blue">C</strong> Name the output PA_Roads_Flood.</p>
+
+<p><strong class="label label-blue">D</strong> Once you have the output, Open the attribute, of PA_Roads_Flood, click right Click Shape_Length » Statistics.  <strong>Take note</strong> of the total length of roads vulnerable to flooding (be mindful of the units).  This is the answer to a quiz question number <a href="Assessment.md#Quiz-Questions"><strong>6</strong></a>.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F_AslIjacNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="select-properties-by-location">Select Properties by Location</h2>
+
+<p>To answer <strong class="label label-red">2</strong> we can use select by location.  See the video below for an explanation of the select by location and instructions on how to apply it in your model.</p>
+
+<p><strong class="label label-blue">A</strong> Use the Properties as the <strong>Input Feature</strong></p>
+
+<p><strong class="label label-blue">B</strong> Use the InundationZone as the <strong>Selecting Feature</strong></p>
+
+<p><strong class="label label-blue">C</strong> Selections are temporary, you have to use the copy features tool to make the selection permanent.  Name the output of the copy <strong>Properties_at_Risk</strong>.  <em>Hint</em> If you check label bars, and sort by the y-axis, it can make your chart easier to interpret.</p>
+
+<ul>
+  <li><strong>Take note</strong> of how many residential (Sum of Residential and Multi-Family Residential) properties are at risk of flooding, this is the answer to a quiz question <a href="Assessment.md#Quiz-Questions"><strong>7</strong></a>.</li>
+</ul>
+
+<p><img src="content/images/bar_format.png" width="300" /></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vqHmErK5J-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="select-properties-by-zonename-and-intersect-population-data">Select Properties by ZoneName and Intersect Population Data</h2>
+
+<p>To answer <strong class="label label-red">3</strong>, the process is a bit more complicated.  If we simply clip the DAs by the Inundation Zone, we’ll end up with a significant overestimate.  Its best to overestimate when doing hazards analysis if you can’t avoid it, but we need our results to be realistic.  We will use three steps to estimate the <em>maximum</em> number of people who may be displaced.</p>
+
+<p><strong class="label label-blue">A</strong> Select just residential and multi-family residential properties.</p>
+<ul>
+  <li>Select by Attribute where:
+    <ul>
+      <li>“ZoneCode <em>is equal to</em> Multi-Family Residential <strong>OR</strong> ZoneCode <em>is equal to</em> Multi-Family Residential”</li>
+    </ul>
+  </li>
+  <li>Copy the features to save the selection as <strong>Residential_at_Risk</strong>.  <em>Hint</em> The number of rows in Residential_at_Risk should match your calculations of the number of residential properties you got from the bar chart you created in the last step.</li>
+</ul>
+
+<p><strong class="label label-blue">B</strong> Intersect Population_Data with the Selection.</p>
+<ul>
+  <li>Input order with the intersect does not matter, because its the combined overlap of both layers.</li>
+</ul>
+
+<p><strong class="label label-blue">C</strong> Dissolve the Intersection.</p>
+<ul>
+  <li>Set <strong>Dissolve Field</strong> to <strong>spatial_id</strong></li>
+  <li>Choose the <strong>Statistics Fields</strong>, this will give us statistics for the aggregation.
+    <ul>
+      <li><strong>Population</strong> - <strong>First</strong></li>
+      <li><strong>Households</strong> - <strong>First</strong></li>
+      <li><strong>ZoneName</strong> - <strong>Count</strong></li>
+    </ul>
+  </li>
+  <li>Set the output name to <strong>Population_at_Risk</strong></li>
+</ul>
+
+<p><strong class="label label-blue">D</strong> Add and Calculate a Field to approximate the number of people in the inundation zone.  The way we are going to do this is calculate the average # of people per household in each DA, times the number of properties at risk (assumed one household = one property).</p>
+<ul>
+  <li>Add a field <strong>Pop_at_Risk</strong></li>
+  <li>Calculate the field
+    <ul>
+      <li>!COUNT_ZoneName!*!FIRST_Population!/!FIRST_Households!</li>
+      <li>The above equation takes then number of properties (!COUNT_ZoneName!)</li>
+      <li>Multiples it by the average household size (!FIRST_Population!/!FIRST_Households!)
+        <ul>
+          <li><strong>This is just a rough estimate</strong>, <em>obviously its flawed</em>, and you’d want a more accurate approach if you were doing this in real life, but this is just for illustrative purposes, so its OK.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rQz8SWEXxrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="select-shelters-by-location">Select Shelters by Location</h2>
+
+<p>To answer <strong class="label label-red">4</strong>, we can use select by location again.  A shelter is only viable if its more than 150 meters away from the inundation zone.  Follow the video below to get setup.</p>
+
+<p><strong class="label label-blue">A</strong> Select Shelters by location</p>
+<ul>
+  <li>Set <strong>Input Feature</strong> to <strong>Shelter</strong></li>
+  <li>Set <strong>Relationship</strong> to “Within a distance”</li>
+  <li>Set <strong>Selecting Feature</strong> to <strong>InundatonZone</strong></li>
+  <li>Set <strong>Search Distance</strong> to <strong>150 meters</strong></li>
+  <li>Check <strong>Invert Spatial Relationship</strong></li>
+</ul>
+
+<p><strong class="label label-blue">B</strong> Copy the Feature</p>
+<ul>
+  <li>Name the output <strong>Shelters_Accepted</strong></li>
+</ul>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4feRTYwJj7g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+:ET

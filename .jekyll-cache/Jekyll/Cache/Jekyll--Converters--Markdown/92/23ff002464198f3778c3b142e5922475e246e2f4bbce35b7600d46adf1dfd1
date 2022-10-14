@@ -1,0 +1,70 @@
+I"“<h1 class="no_toc" id="visualizations--reports">Visualizations &amp; Reports</h1>
+
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#export-your-model" id="markdown-toc-export-your-model">Export Your Model</a></li>
+  <li><a href="#supporting-figures" id="markdown-toc-supporting-figures">Supporting Figures</a></li>
+  <li><a href="#map-the-assessment" id="markdown-toc-map-the-assessment">Map the Assessment</a></li>
+  <li><a href="#report-on-your-results" id="markdown-toc-report-on-your-results">Report on Your Results</a></li>
+</ol>
+
+</details>
+
+<h1 id="export-your-model">Export Your Model</h1>
+
+<p>In your model window, hit Auto Layout one more time.  Then click export and save your model as <strong>PA_RiskAssesment_Model.pdf</strong>.  <em>Note</em> Make sure you save your output as a .pdf, not a .svg file!  You will upload this to canvas.</p>
+
+<p><img src="content/images/export_model.png" width="300" /></p>
+
+<h1 id="supporting-figures">Supporting Figures</h1>
+
+<p>Create a bar chart showing the total count of properties at risk by ZoneName.  Style it so that it is color-coded by zone type and has the counts labelled on each column.</p>
+<ul>
+  <li>Save it as <strong>Properties_at_Risk_Chart.png</strong> and export it so you can upload it to canvas.</li>
+</ul>
+
+<h1 id="map-the-assessment">Map the Assessment</h1>
+
+<p>Create a map showing :</p>
+<ul>
+  <li>The inundation zone</li>
+  <li>Roads at risk of flooding
+    <ul>
+      <li>Use symbology to emphasize the arterial roads</li>
+    </ul>
+  </li>
+  <li>Properties at risk
+    <ul>
+      <li>Distinguish between residential and non-residential</li>
+    </ul>
+  </li>
+  <li>Approved shelter locations.
+    <ul>
+      <li>Show the shelter locations with graduated symbols.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The video below gives you some tips.  <strong>Note</strong> Make sure to take into consideration the <a href="https://geos270.github.io/Module3/">Data Visualization</a> tips presented in Module 3 when creating your maps.  Name your map <strong>PA_RiskAssessment_Final_Map.pdf</strong> and upload it to canvas.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0TnQAzxwWaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h1 id="report-on-your-results">Report on Your Results</h1>
+
+<p>Write a brief report (try to keep it under 500 words) for the City of Port Alberni summarizing your findings and the methods you used to answer them.  Discuss how the inundation zone was calculated, how you addressed the four questions from the city, and any potential inaccuracies/deficiencies in the risk assessment and suggestions for improving a future risk assessment.  Referring to your chart, map, and statistics (population at risk, length of roadways flooded, etc.) where applicable.  Consider embedding the figures in your report and/or creating tables for your statistics.  You still need to submit figures directly as well so we can view full resolution copies of your chart and map.</p>
+
+<p>Make sure your report explicitly addresses:</p>
+
+<p><strong class="label label-red">1</strong> Which roads are at risk of flooding or damage?</p>
+
+<p><strong class="label label-red">2</strong> Which properties in the city are at risk?</p>
+
+<p><strong class="label label-red">3</strong> How many people in Port Alberni are potentially living in areas at risk?</p>
+
+<p><strong class="label label-red">4</strong> Are the Tsunami Shelters sufficient?</p>
+
+<p>Save your write up as a .pdf named PA_RiskAssessment_Summary.pdf and upload it to canvas.</p>
+:ET

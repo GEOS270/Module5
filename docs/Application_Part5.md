@@ -5,7 +5,7 @@ parent: Lab Application
 nav_order: 5
 ---
 
-# Visualizatons & Reports
+# Visualizations & Reports
 {: .no_toc }
 
 <details open markdown="block">

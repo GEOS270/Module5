@@ -1,0 +1,13 @@
+I"<h1 id="spatial-analysis-methods">Spatial Analysis Methods</h1>
+
+<p>This portion of the module will cover assorted techniques/tools we use to analyze spatial data layers.</p>
+
+<ul>
+  <li>We need different tools for vector data and raster data.
+    <ul>
+      <li>Vector data structures are more complex, so there are a number of different ways to see how features relate to each other.</li>
+      <li>Raster data is less complex, but there are many different types of analysis we can conduct with it!</li>
+    </ul>
+  </li>
+</ul>
+:ET

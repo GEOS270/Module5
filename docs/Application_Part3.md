@@ -75,7 +75,7 @@ To answer question **1**{: .label .label-red } all we need to do is clip the roa
 
 **C**{: .label .label-blue } Name the output PA_Roads_Flood.
 
-**D**{: .label .label-blue } Once you have the output, Open the attribute, of PA_Roads_Flood, click right Click Shape_Length >> Statistics.  **Take note** of the total length of roads vulnerable to flooding (be mindful of the units).  This is an answer to a quiz question.
+**D**{: .label .label-blue } Once you have the output, Open the attribute, of PA_Roads_Flood, click right Click Shape_Length >> Statistics.  **Take note** of the total length of roads vulnerable to flooding (be mindful of the units).  This is the answer to a quiz question number [**6**](Assessment.md#Quiz-Questions).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F_AslIjacNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -89,9 +89,9 @@ To answer **2**{: .label .label-red} we can use select by location.  See the vid
 
 **B**{: .label .label-blue } Use the InundationZone as the **Selecting Feature**
 
-**C**{: .label .label-blue } Selections are temporary, you have to use the copy features tool to make the selection permanent.  Name the output of the copy **Properties_at_Risk**.
+**C**{: .label .label-blue } Selections are temporary, you have to use the copy features tool to make the selection permanent.  Name the output of the copy **Properties_at_Risk**.  *Hint* If you check label bars, and sort by the y-axis, it can make your chart easier to interpret.  
 
-**D**{: .label .label-blue } Once you have the output, create a bar chart of properties by ZoneName.  **Take note** of how many residential (Sum of Residential and Multi-Family Residential) properties are at risk of flooding, this is the answer to a quiz question.  *Hint* If you check label bars, and sort by the y-axis, it can make your chart easier to interpret.
+* **Take note** of how many residential (Sum of Residential and Multi-Family Residential) properties are at risk of flooding, this is the answer to a quiz question [**7**](Assessment.md#Quiz-Questions).  
 
 <img src='content/images/bar_format.png' width='300'>
 

@@ -1,0 +1,281 @@
+I"�0<h1 class="no_toc" id="assessment">Assessment</h1>
+
+<p>You can use the course Canvas page to complete the quiz, written submission, and files uploads.  I suggest you download write down your answers as you progress through the Content and Application sections then upload your answers to canvas once you have finished the module.</p>
+
+<ol id="markdown-toc">
+  <li><a href="#module-quiz-25pts" id="markdown-toc-module-quiz-25pts">Module Quiz (25pts)</a>    <ol>
+      <li><a href="#content" id="markdown-toc-content">Content</a></li>
+      <li><a href="#application" id="markdown-toc-application">Application</a></li>
+    </ol>
+  </li>
+  <li><a href="#module-assignment-70pts" id="markdown-toc-module-assignment-70pts">Module Assignment (70pts)</a>    <ol>
+      <li><a href="#content-1" id="markdown-toc-content-1">Content</a></li>
+      <li><a href="#application-40pts" id="markdown-toc-application-40pts">Application (40pts)</a></li>
+      <li><a href="#file-submissions-35-pts" id="markdown-toc-file-submissions-35-pts">File Submissions (35 pts)</a></li>
+    </ol>
+  </li>
+  <li><a href="#rubric" id="markdown-toc-rubric">Rubric</a></li>
+</ol>
+
+<hr />
+
+<h1 id="module-quiz-25pts">Module Quiz (25pts)</h1>
+
+<p>All quiz answers are multiple choice, numeric input, fill in the blank, etc. type questions.  They can be submitted via the Module 1 Quiz that can be found on the Canvas page.  You will have unlimited attempts to take the quiz.</p>
+
+<h2 id="content">Content</h2>
+
+<p><a href="Content.md#qc1"><strong>QC1</strong></a></p>
+
+<p>The [Clip/Intersect/Union] tool can be used to identify the areas of two or more [vector/raster] layers that overlap <em>and</em> combine all attributes to create a new layer.</p>
+
+<p>Correct:  <strong>Intersect, vector</strong></p>
+
+<p><a href="Content.md#qc2"><strong>QC2</strong></a></p>
+
+<p>The [Clip/Intersect/Union] tool can be used to combine all attributes of two or more [vector/raster] layers and create a new layer.  This tool will include non-overlapping area in the output.</p>
+
+<p>Correct:  <strong>Union, vector</strong></p>
+
+<p><a href="Content.md#qc3"><strong>QC3</strong></a></p>
+
+<p>The [Clip/Intersect/Union/Erase] tool can be used like a cookie cutter.  It cuts away the portions of an input that do not overlap the clip layer but does not merge attributes.</p>
+
+<p>Correct:  <strong>Clip</strong></p>
+
+<p><a href="Content.md#qc4"><strong>QC4</strong></a></p>
+
+<p>The [Weighted Overlay/Slope/Union/Zonal Statistics] tool can be used to conduct suitability or risk analysis.  Multiple [raster/vector] layers are overlaid to generate a suitability or risk classification map.</p>
+
+<p>Correct:  <strong>IntWeighted Overlay, Raster</strong></p>
+
+<p><a href="Content.md#qc5"><strong>QC5</strong></a></p>
+
+<p>The [Raster Calculator/Weighted Overlay/Union/Zonal Statistics] tool can also be used to conduct suitability or risk analysis, but it is a more general tool that allows you to define algebraic expressions using raster layers.</p>
+
+<p>Correct:  <strong>Raster Calculator</strong></p>
+
+<p><a href="Content.md#qc6"><strong>QC6</strong></a></p>
+
+<p>The [Slope/Aspect/Reclassify] tool can also be used to calculate the compass direction that a hillside is facing.</p>
+
+<p>Correct:  <strong>Aspect</strong></p>
+
+<p><a href="Content.md#qc7"><strong>QC7</strong></a></p>
+
+<p>Stratified random sampling is a(n) [biased/unbiased] sampling method that seeks to draw a more representative sample than pure random sampling.</p>
+
+<p>Correct:  <strong>biased</strong></p>
+
+<p><a href="Content.md#qc8"><strong>QC8</strong></a></p>
+
+<p>Spatial [autocorrelation/interpolation/overlay] effects the results we get when sampling spatial data. It is important to think through the impacts when we are sampling spatial data.</p>
+
+<p>Correct:  <strong>autocorrelation</strong></p>
+
+<p><a href="Content.md#qc9"><strong>QC9</strong></a></p>
+
+<p>Spatial [Interpolation/Overlay/Sampling] is a process used to “read between the lines” or infer what values are between locations where we have measurements.</p>
+
+<p>Correct:  <strong>Interpolation</strong></p>
+
+<p><a href="QContent.md#qc0"><strong>C10</strong></a></p>
+
+<p>Our guest speaker Alysha is the <strong>__</strong> for Peace Geeks, a non-profit that builds digital tools that provide refugees and immigrants crucial knowledge to take charge of their migration journeys.  Peace Geeks developed an app called <strong>__</strong> to help newcomers to British Columbia and Manitoba find information and connect with free services.</p>
+
+<p>Correct:  <strong>Product Manager, Peace Geeks</strong></p>
+
+<hr />
+
+<h2 id="application">Application</h2>
+
+<p><a href="Application_Part1.md#qa1"><strong>QA1</strong></a></p>
+
+<p>The maximum wave height recorded at Tofino was only <em>__</em> meters.  Despite this, wave heights exceeded 8 meters in Port Alberni.</p>
+
+<p>2.4</p>
+
+<p><a href="Application_Part2.md#qa2"><strong>QA2</strong></a></p>
+
+<p>Why do we use a feature dataset to hold all our input layers?</p>
+
+<ul>
+  <li>No reason</li>
+  <li>So everything is neatly grouped in one folder</li>
+  <li>To ensure all our vector data is in the same projection, the feature dataset will automatically re-project our vector data when importing</li>
+  <li>To ensure all our vector and raster data is in the same projection, the feature dataset will automatically re-project our vector and raster data when importing</li>
+</ul>
+
+<p>C</p>
+
+<p><a href="Application_Part3.md#qa3"><strong>QA3</strong></a></p>
+
+<p>Why are we using model builder for this analysis?  Select all that apply</p>
+
+<ul>
+  <li>Your analysis is easily repeatable when using model builder</li>
+  <li>You can share your easily update your analysis</li>
+  <li>You can share your visualize your workflow</li>
+  <li>You can share your workflow</li>
+</ul>
+
+<p>All</p>
+
+<p><a href="Application_Part3.md#qa4"><strong>QA4</strong></a></p>
+
+<p>How many <strong>km</strong> of roads are at risk?  Rounded to the nearest tenth km is fine.  <em>Hint</em> Open the attribute, of PA_Roads_Flood, click right Click Shape_Length » Statistics to find the sum.</p>
+
+<p>49.6 km</p>
+
+<p><a href="Application_Part3.md#qa5"><strong>QA5</strong></a></p>
+
+<p>How many residential properties (single and multi-family combined) are are at risk?</p>
+
+<p>689</p>
+
+<p><a href="Application_Part3.md#qa6"><strong>QA6</strong></a></p>
+
+<p>What is our estimate of Pop_at_Risk?</p>
+
+<p>1444</p>
+
+<p><strong>Wrong</strong>: 1443.9 - you can’t have nine tenths of a person</p>
+
+<p><a href="Application_Part4.md#qa7"><strong>QA7</strong></a></p>
+
+<p>How many <strong>km</strong> of roadways are at risk of flooding?Rounded to the nearest tenth km is fine.</p>
+
+<p>70.6
+Correct:  <strong>70.5 - 70.7</strong>
+Half Pts:  <strong>69.6 - 71.6</strong></p>
+
+<p><a href="Application_Part4.md#qa8"><strong>QA8</strong></a></p>
+
+<p>How many properties (of any kind) are at risk of flooding?</p>
+
+<p>1413</p>
+
+<p><a href="Application_Part4.md#qa9"><strong>QA9</strong></a></p>
+
+<p>How many people are potentially at risk of displacement?</p>
+
+<p>2038</p>
+
+<p><strong>Wrong</strong>: 2037.9 - you can’t have nine tenths of a person</p>
+
+<p><a href="Application_Part4.md#qa10"><strong>QA10</strong></a></p>
+
+<p>How many shelters are in suitable locations?</p>
+
+<p>2</p>
+
+<hr />
+
+<h1 id="module-assignment-70pts">Module Assignment (70pts)</h1>
+
+<p>All written answers should be numbered and record in one document, saved as a .pdf, and uploaded to canvas.  The file submissions should also be saved as .pdf and uploaded as a separate document.  <strong>Written answers can be as brief as you want as long as they answer the question.</strong></p>
+
+<h2 id="content-1">Content</h2>
+
+<p>No written questions for lecture content this module.</p>
+
+<hr />
+
+<h2 id="application-40pts">Application (40pts)</h2>
+
+<p><a href="Application_Part1.md#wa1"><strong>WA1</strong></a> - 10pts</p>
+
+<p>What does the example presented in Ludwin et al. 2005 say about the value that the sciences have historically attributed to traditional knowledge in when it comes to understanding our world?</p>
+
+<p>The sciences have tended to have a bias against and non-white/colonial/male knowledge and sources.  This is a serious issue, its related to belief perseverance, which we discussed at the beginning of term, and is rooted in white supremacy.</p>
+
+<p><a href="Application_Part1.md#wa2"><strong>WA2</strong></a> - 5pts</p>
+
+<p>Look back at Ludwin et al. 2005, specifically at the story of Pachena Bay (bottom pg 142 to top of pg 143).  You can find a <a href="https://pnsn.org/outreach/native-american-stories/other-stories/the-tsunami-at-anaqtl-a-or-pachena-bay">full transcription here</a>.  Find Pachena Bay on google maps.  Where is it relative to Port Alberni?  What can you infer from this story about how a megathrust earthquake occurring just off of the coast of Vancouver Island would impact Port Alberni?</p>
+
+<p>The whole village was destroyed.  Only people living up high on the hill survived.  The bay has a shorter but similar shape to the alberni inlet.  An equivalent earthquake would be VERY bad given the historical evidence.</p>
+
+<p><a href="Application_Part5.md#wa3"><strong>WA3</strong></a> - 20pts</p>
+
+<p>Write a brief (1 page) report for the City of Port Alberin.  The report needs explicity answer the four questions questions:</p>
+
+<p><strong class="label label-red">1</strong> Which roads are at risk of flooding or damage?</p>
+
+<p><strong class="label label-red">2</strong> Which properties in the city are at risk?</p>
+
+<p><strong class="label label-red">3</strong> How many people in Port Alberni are potentially living in areas at risk?</p>
+
+<p><strong class="label label-red">4</strong> Are the Tsunami Shelters sufficient?</p>
+
+<p>You should briefly summarize the analysis steps you used to conduct the Tsunami Risk Assessment and explain your findings referring to your charts, map, statistics where necessary.</p>
+
+<p>Needs to explain results &amp; answer each question (see above^) (10 pts - 2 each) + introduction/summary of problem (5pts) + explain steps (5pts).  They should make specific references to their results (quote statistics, reference maps), also reference model when discussing the analysis steps.  You don’t have to check to make sure their number are “exact” - as that is in the quiz above ^^ but anything they say should be generally correct (eg. if they say all shelters are acceptable, take off pts.)</p>
+
+<hr />
+
+<h2 id="file-submissions-35-pts">File Submissions (35 pts)</h2>
+
+<p><a href="Application_Part5.md#fa1"><strong>FA1</strong></a> - 5pts</p>
+
+<p>Upload your model to canvas.</p>
+
+<p>Model should have the proper steps (see example Module5_Model.pdf)</p>
+
+<p><a href="Application_Part5.md#fa2"><strong>FA2</strong></a> - 10pts</p>
+
+<p>Upload your Charts to canvas.</p>
+
+<p>Bar charts should show:</p>
+
+<p>1) Total count of properties at risk by ZoneName
+2) Population at risk (Pop_at_Risk) by Dissemination Area (spatial_id).</p>
+
+<ul>
+  <li>Be appropriately labeled and styled</li>
+</ul>
+
+<p><a href="Application_Part5.md#fa3"><strong>FA3</strong></a> - 20pts</p>
+
+<p>Upload your Map to canvas.</p>
+
+<p>Map must show: Inundation Zone, roads at risk of flooding, properties at risk, and approved shelter locations (they should either show only the two acceptable shelters, or show the third shelter as a separate class, distinguishing it as unacceptable.)  Use the Symbology to emphasize the Arterial Roads, distinguish between residential and non-residential properties that are at risk, and show the shelter locations with graduated symbols (by capacity).</p>
+
+<ul>
+  <li>Should be appropriately styled (accessible colors (no red-green color schemes for features that need to be distinguished))</li>
+</ul>
+
+<h1 id="rubric">Rubric</h1>
+
+<p>All written answers submissions will be scored using this generic rubric.  Your TA will provide brief comments where applicable.  For more feedback you can follow up with your TA.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Score</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0%</td>
+      <td>Missing</td>
+    </tr>
+    <tr>
+      <td>25%</td>
+      <td>Insufficient</td>
+    </tr>
+    <tr>
+      <td>50%</td>
+      <td>Below Expectations</td>
+    </tr>
+    <tr>
+      <td>75%</td>
+      <td>Met Expectations</td>
+    </tr>
+    <tr>
+      <td>100%</td>
+      <td>Exceeds Expectations</td>
+    </tr>
+  </tbody>
+</table>
+:ET
