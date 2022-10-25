@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Raster Data
-parent: Spatial Analysis
+parent: Methods
 grand_parent: Spatial Analysis
 has_children: True
 nav_order: 2
@@ -12,7 +12,7 @@ nav_order: 2
 <!-- There are also many different types of manipulations we can do with raster data.  Because raster data is "simpler" we often don't need as many tools needed to accomplish all these tasks.  Rather, we often rely on stringing together multiple computations.  Many of the complex raster analyses we can do are beyond the scope of this course, but we'll cover the basics here.
  -->
 
-[Raster Examples Project](https://github.com/June-Skeeter/Module4_GEOS270/blob/main/data/RasterMethods.zip){: .btn .btn-blue }
+[Raster Examples Project](https://github.com/GEOS270/Module5/blob/main/data/RasterMethods.zip){: .btn .btn-blue }
 
 
 <div style="overflow: hidden;

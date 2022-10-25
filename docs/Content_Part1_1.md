@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Vector Data
-parent: Spatial Analysis
+parent: Methods
 grand_parent: Spatial Analysis
 has_children: True
 nav_order: 1
@@ -11,7 +11,7 @@ nav_order: 1
 ## Working Examples
 
 
-[Vector Examples Project](https://github.com/June-Skeeter/Module4_GEOS270/blob/main/data/Vector_Overlay_Exapmles.zip){: .btn .btn-blue }
+[Vector Examples Project](https://github.com/GEOS270/Module5/blob/main/data/Vector_Overlay_Exapmles.zip){: .btn .btn-blue }
 
 
 # Vector Analysis Methods

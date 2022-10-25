@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Spatial Sampling and Inference
-parent: Spatial Analysis
+parent: Spatial Analysiss
 has_children: True
 nav_order: 2
 ---
