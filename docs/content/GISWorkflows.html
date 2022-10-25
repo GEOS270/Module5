@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- <meta charset="utf-8"> -->
+
+  <title>Reveal.js template</title>
+  <!-- credit https://bl.ocks.org/elipousson/f64814b1ee4aab5d83775bfbf556d35a -->
+
+  <meta name="description" content="Simple Reveal.js slidedeck template. Source files loaded from jsDelivr.">
+  <meta name="author" content="jitesh@spinspire.com">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
+  <link id="theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/serif.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    // Load print, pdf stylesheets from jsDelivr
+    var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/';
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = srcUrlPrefix + (window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css');
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  <style>
+    
+.container {
+  position: fixed;
+    height: 700px;
+    width: 100%;
+}
+
+.title{
+  position: relative;
+  top: 5%;
+}
+
+.subtitle{
+  position: relative;
+  top: 10%;
+}
+
+.question{
+  position: relative;
+  text-align: left;
+  top: 10%;
+}
+
+
+.header {
+  top: 1%;
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  text-align: left;
+}
+
+.full {
+  width: 95%;
+  top:  12%;
+  left: 0%;
+  text-align: left;
+  position: absolute; 
+}
+
+.left {
+  width: 49%;
+  height: 80%;
+  top: 12%;
+  left: 0%;
+  position: absolute;
+  text-align: left;
+}
+
+.right {
+  width: 49%;
+  top: 12%;
+  height: 80%;
+  left: 51%;
+  position: absolute;
+  text-align: left;
+}
+
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.figure {
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  display: flex;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+}
+
+
+.subfigure {
+  width: 100%;
+  /* height: 100%; */
+  left: 0%;
+  display: flex;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+}
+
+h1 {
+  display: block;
+  font-size: 3em !important; 
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+  
+h2 {
+  display: block;
+  font-size: 1.5em !important;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.reveal a {
+  color: blue;
+}
+
+.reveal {
+  background-color: #e6f9fc;
+}
+
+ul {
+    padding-left: 0;
+    font-size: 90%;
+
+} 
+
+ol {
+  counter-reset: item;
+  font-size: 90%;
+  padding-left: 0;
+}
+
+li.nl {
+  display: block;
+}
+
+li.nl:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+
+ol ol li.nl::before {
+    content: counters(item, ".") " ";
+}
+
+#main img {
+    float: left;
+}
+
+.col {
+    flex: 1
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <div class="slides">
+        <section>
+            <div class="title">
+                <h1>GIS Workflows</h1>
+            </div>
+            <div class="subtitle">
+                The flow of information through a project.
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="header">GIS Research Process</h2>
+                <div class="full">
+                    <ol>
+                        <li>Define your research question
+                            <ul>
+                                <li>Identify the problems you will address and determine scale of your analysis</li>
+                                <li>Explore the available data</li>
+                                <ul>
+                                    <li>Adjust your research question as needed</li>
+                                </ul>
+                                <li>Outline a plan for your analysis</li>
+                            </ul>
+                        </li>
+                        <li>Conduct your analysis
+                            <ul>
+                                <li>Clean, convert, reproject, and reclassify input data</li>
+                                <li>Spatial overlays, statistical tests, summary statistics, etc.</li>
+                                <li>Refine and incorporate more data as needed</li>
+                            </ul>
+                        </li>
+                      <li>Share your results
+                        <ul>
+                            <li>Visualizations, reports, publications, press releases, etc.</li>
+                            <li>Identify new questions</li>
+                            <ul>
+                                <li>Good research often generates more questions than it answers</li>
+                            </ul>
+                        </ul>
+                      </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+              
+        <section>
+            <div class="container">
+                <h2 class="header">Visualizing a Workflow</h2>
+                <div class="left">
+                    <p>It is a good idea to think through a workflow before conducting it.</p>
+                    <ul>
+                      <li>A flowchart is a diagram that outlines the key steps in an analysis</li>
+                      <li>A flowchart can help you</li>
+                      <ul>
+                        <li>Identify necessary analysis steps</li>
+                        <li>Think through the logical progression of analysis steps</li>
+                        <li>Catch errors <b>before</b> you start working</li>
+                        <li>Share your planned analysis with colleagues, funding organizations, etc.</li>
+                      </ul>
+                    </ul>
+                </div>
+                <div class="r-stack">
+                    <div class = "figure fragment fade-out" data-fragment-index="0">
+                        <br>
+                        <img src="images/Flowchart.png" width="100%" style="border: solid 2px black">
+                    </div>
+                    <div class = "figure fragment fade-in" data-fragment-index="0">
+                        <img src="images/Modelling_NECB.png" height="100%" style="border: solid 2px black">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+            <h1 class="title">TopHat Question 1</h1>
+                <div class="question">
+                <p>A _______ is a diagram that outlines the key steps in an analysis.</p>
+            </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="header">An Applied Example</h2>
+                <div class="left">
+                    <p>Port Alberni has needs a new tsunami evacuation shelter and you have been tasked with finding a suitable location.  The shelter must:</p>
+                    <ol>
+                            <li>Outside the flood zone: > 15 m elevation <b>or</b> > 1 km from coast.</li>
+                            <li>&gt; 1.5 km from existing shelters.</li>
+                            <li>&lt; 250 m from an Arterial Roadway.</li>
+                            <li>Not on Residential, Commercial, or Industrial parcels.</li>
+                    </ol>
+               </div>
+               <div class = "figure">
+                    <img src="images/Flowchart_Example.png" width="100%" style="border: solid 2px black">
+               </div>
+        </section>
+      
+        <section>
+            <div class="container">
+                <h2 class="header">Visualizing a Workflow</h2>
+                <div class="left">
+                    <p>It is best to create a workflow that is repeatable, modifiable, and sharable.</p>
+                    <ul>
+                        <li>"Point and Click" GIS is not repeatable</li>
+                        <li>This can create a <b>lot</b> of problems when you need to redo or update complex analyses</li>
+                    </ul>
+                </div>
+                <div class = "figure">
+                    <br>
+                    <img src="images/RiskModelling.png" width="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+
+        
+        <section>
+            <div class="container">
+                <h2 class="header">Visualizing a Workflow</h2>
+                <div class="left">
+                    <p>Model Builder is a good solution for beginners.</p>
+                    <ul>
+                        <li>It lets you define you analysis steps using a flowchart</li>
+                        <li>Inputs can be run trough sequences of geoprocessing steps</li>
+                        <li>Models are easy to save, update, and re-run</li>
+                        <li>Also helps you visualize your results and share them with others</li>
+                    </ul>
+                </div>
+                <div class = "figure">
+                    <br>
+                    <img src="images/RiskModelling.png" width="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <h2 class="header">Visualizing a Workflow</h2>
+                <div class="left">
+                    <p>If you pursue a GIS career, you should consider learning to code.</p>
+                    <ul>
+                        <li>Code is replicable, legible, and even more explicit than a model</li>
+                        <ul>
+                            <li>Models can be exported as Python code for fine tuning</li>
+                            <li>Good way to start learning code</li>
+                        </ul>
+                        <li>Python is a great option for geospatial analysis</li>
+                        <li>Javascript is great for making webmaps</li>
+                    </ul>
+                </div>
+                <div class="r-stack">
+                    <div class = "figure fragment fade-out" data-fragment-index="0">
+                        <br>
+                        <img src="images/Model_Code.png" width="100%" style="border: solid 2px black">
+                    </div>
+                    
+                    <div class = "figure fragment fade-in-then-out" data-fragment-index="0">
+                        <img src="images/Code.png" height="100%" style="border: solid 2px black">
+                    </div>
+
+                    <div class = "figure fragment fade-in" data-fragment-index="1">
+                        <br>
+                        <div style="overflow: hidden;
+                        padding-top: 75.25%;
+                        position: relative">
+                        <iframe src="https://ubc-micromet.github.io/FieldSiteMaps/" title="Processes" scrolling="no" frameborder="0"
+                            style="border: 0;
+                        height: 100%;
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        width: 100%;">
+                        </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+            <h1 class="title">TopHat Question 2</h1>
+                <div class="question">
+                <p>This is useful tool that lets you define your analysis steps using a flowchart and create repeatable workflows.</p>
+                <ul>
+                    <li>Model Builder</li>
+                    <li>Geoprocessing</li>
+                    <li>Raster Calculator</li>
+                    <li>Google Earth Engine</li>
+                    <li>Python</li>
+                </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+            <h1 class="title">TopHat Question 3</h1>
+                <div class="question">
+                <p>These are programming languages that can be used to for GIS:</p>
+                <ul>
+                    <li>Python</li>
+                    <li>Microsoft Excel</li>
+                    <li>Javascript</li>
+                    <li>ArcGIS Pro</li>
+                </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+    </div><!-- .slides -->
+
+    
+  </div><!-- .reveal -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/math/math.min.js"></script>
+
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      overview: false,
+      loop: false,
+      margin: 0.03,
+      width: 1350,
+      height: 700,
+      transition: 'none',
+      plugins: [ RevealMath.MathJax2,
+    // RevealMarkdown
+         ]
+    },
+
+
+    );
+  </script>
+</body>
+
+</html>
