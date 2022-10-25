@@ -2,7 +2,7 @@
 layout: default
 title: Raster Data
 parent: Spatial Analysis
-grand_parent: Lecture Content
+grand_parent: Spatial Analysis
 has_children: True
 nav_order: 2
 ---
