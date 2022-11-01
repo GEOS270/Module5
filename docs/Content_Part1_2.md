@@ -18,7 +18,7 @@ nav_order: 2
 <div style="overflow: hidden;
   padding-top: 56.25%;
   position: relative">
-  <iframe src="content/RasterAnalysis.html" title="Processes" scrolling="no" frameborder="0"
+  <iframe src="content/RasterMethods.html" title="Processes" scrolling="no" frameborder="0"
     style="border: 0;
    height: 100%;
    left: 0;
@@ -28,7 +28,7 @@ nav_order: 2
    <p>Your browser does not support iframes.</p>
  </iframe>
 </div>
-<a href="content/RasterAnalysis.html" target="_blank">View Slides in New Tab</a>
+<a href="content/RasterMethods.html" target="_blank">View Slides in New Tab</a>
 
 <!-- ## Parsing and Aggregating
 

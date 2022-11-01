@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- <meta charset="utf-8"> -->
+
+  <title>Reveal.js template</title>
+  <!-- credit https://bl.ocks.org/elipousson/f64814b1ee4aab5d83775bfbf556d35a -->
+
+  <meta name="description" content="Simple Reveal.js slidedeck template. Source files loaded from jsDelivr.">
+  <meta name="author" content="jitesh@spinspire.com">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
+  <link id="theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/serif.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    // Load print, pdf stylesheets from jsDelivr
+    var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/';
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = srcUrlPrefix + (window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css');
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  <style>
+    
+.container {
+  position: fixed;
+    height: 700px;
+    width: 100%;
+}
+
+.title{
+  position: relative;
+  top: 5%;
+}
+
+.subtitle{
+  position: relative;
+  top: 10%;
+}
+
+.question{
+  position: relative;
+  text-align: left;
+  top: 10%;
+}
+
+
+.header {
+  top: 1%;
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  text-align: left;
+}
+
+.full {
+  width: 95%;
+  top:  12%;
+  left: 0%;
+  text-align: left;
+  position: absolute; 
+}
+
+.left {
+  width: 49%;
+  height: 80%;
+  top: 12%;
+  left: 0%;
+  position: absolute;
+  text-align: left;
+}
+
+.right {
+  width: 49%;
+  top: 12%;
+  height: 80%;
+  left: 51%;
+  position: absolute;
+  text-align: left;
+}
+
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.figure {
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  display: flex;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+}
+
+
+.subfigure {
+  width: 100%;
+  /* height: 100%; */
+  left: 0%;
+  display: flex;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+}
+
+h1 {
+  display: block;
+  font-size: 3em !important; 
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+  
+h2 {
+  display: block;
+  font-size: 1.5em !important;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.reveal a {
+  color: blue;
+}
+
+.reveal {
+  background-color: #e6f9fc;
+}
+
+ul {
+    padding-left: 0;
+    font-size: 90%;
+
+} 
+
+ol {
+  counter-reset: item;
+  font-size: 90%;
+  padding-left: 0;
+}
+
+li.nl {
+  display: block;
+}
+
+li.nl:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+
+ol ol li.nl::before {
+    content: counters(item, ".") " ";
+}
+
+#main img {
+    float: left;
+}
+
+.col {
+    flex: 1
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <div class="slides">
+        <section>
+            <div class="title">
+                <h1>Raster Analysis Methods</h1>
+            </div>
+            <div class="subtitle">
+                Raster overlays, key operations and techniques.
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+            <h1 class="title">Reading Break Makeup Lab</h1>
+                <div class="question">
+                <p>What time slot would you prefer for a makeup lab session? Not for credit, only answer if you are in Sierra's Wed or Fri Lab, select all that apply</p>
+                <ul>
+                    <li>Monday the 7th 9:00-11:00</li>
+                    <li>Monday the 7th 10:00-12:00</li>
+                    <li>Monday the 7th 15:00-17:00</li>
+                    <li>None of these work for me :(</li>
+                </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="header">Raster Analysis Methods</h2>
+                <div class="full">
+                    <p>Often our data is more "complex" than we need it to be.  It is useful to parse, reclassify, and/or aggregate our data.</p>
+                    <ul>
+                      <li><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/clip.htm">Clip Raster</a>: cuts raster down to a bounding box.</li>
+                      <ul><li>Max N/S & E/W extent of another layer (vector or raster) or manually defined.</li></ul>
+                      <li><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/reclassify.htm">Reclassify</a>: reassign cell values.</li>
+                      <li><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/mosaic.htm">Mosaic</a>: Combine multiple raster data sets into one.</li>
+                      <ul>
+                        <li>There are <a href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/mosaic-operators.htm">multiple approaches</a> we can use.</li>
+                      </ul>
+                    </ul>
+                </div>
+            </div>
+        </section>
+              
+        <section>
+            <div class="container">
+                <h2 class="header">Overlay</h2>
+                <div class="left">
+                    <p>When we have multiple raster layers and we want to combine them to form a new output.</p>
+                    <ul>
+                        <li>We have a few tools we can use for this</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <img src="images/03-raster-overlay.png" width="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="header"><a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/weighted-overlay.htm">Weighted Overlay</a></h2>
+                <div class="left"><p>Weights inputs for suitability analysis or risk assessment.</p>
+                    <ul>
+                        <li>Inputs must be discrete numbers</li>
+                        <li>Manually define weights and scale</li>
+                    </ul>
+                    
+                <img src="images/Weighted_Overlay2.png" width="100%" style="border: solid 2px black">
+                </div>
+                <div class="figure">
+                    <img src="images/Weighted_Overlay.png" height="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="header"><a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/raster-calculator.htm">Raster Calculator</a></h2>
+                <div class="left">
+                    <p>More general than weighted overlay.</p>
+                    <ul>
+                        <li>Outputs are more more straightforward</li>
+                        <ul>
+                            <li>Because inputs are more explicit</li>
+                        </ul>
+                        <li>Can do weighted overlay</li>
+                    </ul>
+                </div>
+                <div class="figure">
+                    <img src="images/RasterCalculator.png" height="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+        
+        
+        <section>
+            <div class="container">
+            <h1 class="title">TopHat Question 1</h1>
+                <div class="question">
+                    <p>This tool allows you to define equations using raster layers as variables.</p>
+                    <ul>
+                        <li>Weighted Overlay</li>
+                        <li>Raster Calculator</li>
+                        <li>Reclassify</li>
+                        <li>Mosaic</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="header"><a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics.htm">Zonal Statistics</a></h2>
+                <div class="left">
+                    <p>Calculate statistics (mean, max, etc.) using zones (regions) and output desired statistic by zone.</p>
+                    <ul>
+                        <li>The zone can be either a raster <b>or</b> vector layer.</li>
+                        <li><b><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/zonal-statistics-as-table.htm">Zonal Statistics as Table</a></b> generates a table containing multiple statistics by zone.</li>
+                    </ul>
+               </div>
+               <div class="figure">
+                    <img src="images/zonal_stats.png" width="100%" style="border: solid 2px black">
+                    <img src="images/zonal_stats_table.png" width="100%" style="border: solid 2px black">
+               </div>
+        </section>
+      
+        <section>
+            <div class="container">
+                <h2 class="header">Proximity Analysis</h2>
+                <div class="left">Sometimes, we're interested in looking at spatial relationships using raster data.</p>
+                    <ul>
+                      <li><a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/euclidean-distance.htm">Euclidean Distance</a>: use this tool to calculate distance from the nearest feature or raster layer.</li>
+                    </ul>
+                </div>
+                <div class = "figure">
+                    <br>
+                    <br>
+                    <img src="images/euc_dist.png" width="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="header">Surface Analysis</h2>
+                <div class="full">
+                    <p>These tools are specifically designed to analyze terrain surfaces (ie. Digital Elevation Models).</p>
+                    <ul>
+                        <li>However, they can be applied to other purposes in select applications</li>
+                        <li><b><a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/slope.htm">Slope</a></b>: calculates the slope of a terrain surface</li>
+                        <ul>
+                            <li>ie. the angle in degrees from a cell to it's "lowest" neighbor</li>
+                        </ul>
+                        <li><b><a href="https://pro.arcgis.com/en/pro-app/latest/help/analysis/raster-functions/aspect-function.htm">Aspect</a></b>: calculates the direction a slope is facing</li>
+                        <ul>
+                            <li>North, southeast, west northwest, etc.</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+            <h1 class="title">TopHat Question 2</h1>
+                <div class="question">
+                <p>The euclidean-distance tool lets you calculate the slope and aspect of a raster layer.</p>
+                <ul>
+                    <li>True</li>
+                    <li>False</li>
+                </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="header">Raster Functions</h2>
+                <div class="left">
+                    <p>ArcGIS Pro has an extensive toolkit of tools for more complex analyses.</p>
+                    <ul>
+                        <li>Many are beyond the scope of intro-level GIS</li>
+                    </ul>
+                </div>
+                <div class="figure">
+                    <img src="images/Raster_Functions.png" width="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="header">Hydrologic Modelling</h2>
+                <div class="left">
+                    <p>The <b><a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/an-overview-of-the-hydrology-tools.htm">Hydrology toolset</a></b> can be used to calculate stream flow.</p>
+                    <ol>
+                        <li>Use a DEM as an input</li>
+                        <li>Fill "sinks"</li>
+                        <li>Calculate flow direction</li>
+                        <li>Run flow accumulation</li>
+                    </ol>
+                </div>
+                <div class="figure fragment fade-out" data-fragment-index="0">
+                    <img src="images/Hydrology.png" height="100%" style="border: solid 2px black">
+                </div>
+                <div class="figure fragment fade-in-then-out" data-fragment-index="0">
+                    <p>DEM Input</p>
+                    <img src="images/DEM.png" width="100%" style="border: solid 2px black">
+                </div>
+                <div class="figure fragment fade-in" data-fragment-index="1">
+                    <p>Accumulated stream flow output</p>
+                    <img src="images/Stream.png" width="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <h2 class="header">Calculate NDVI</h2>
+                <div class="full">
+                    <p>You can calculate NDVI directly in Arc</li>
+                        <ul>
+                            <li>Just give the red and near infrared bands from a satellite image</li>
+                            <ul>
+                                <li>e.g. Landsat8: Red (4), near infrared (5)</li>
+                            </ul>
+                        </ul>
+                    <img src="images/NDVI_Calc.png" width="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <h2 class="header">Image Classification</h2>
+                <div class="left">
+                    <p>Classify a raster.</p>
+                    <ul>
+                        <li>Supervised or unsupervised</li>
+                    </ul>
+                </div>
+                <div class="figure">
+                    <img src="images/Classification1.png" height="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <h2 class="header">Image Classification</h2>
+                <div class="full">
+                    <p>Classify a raster.</p>
+                    <ul>
+                        <li>Supervised or unsupervised</li>
+                    </ul>
+                    <img src="images/Classification2.png" width="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+            <h1 class="title">TopHat Question 3</h1>
+                <div class="question">
+                <p>This group of raster tools allows us delineate streams and drainage basins from a DEM.</p>
+                <ul>
+                    <li>Hydrology Toolset</li>
+                    <li>Image Classification</li>
+                    <li>Kernel Density</li>
+                    <li>NDVI</li>
+                </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+            <h1 class="title">TopHat Question 4</h1>
+                <div class="question">
+                <p>What will we be doing in GEOS 270 on Tuesday Nov 8th? (select all that apply)</p>
+                <ul>
+                    <li>Lecture is scheduled as usual</li>
+                    <li>Optional lab help session in room 115</li>
+                    <li>Lecture is cancelled</li>
+                </ul>
+                </div>
+            </div>
+        </section>
+        
+    </div><!-- .slides -->
+
+    
+  </div><!-- .reveal -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/math/math.min.js"></script>
+
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      overview: false,
+      loop: false,
+      margin: 0.03,
+      width: 1350,
+      height: 700,
+      transition: 'none',
+      plugins: [ RevealMath.MathJax2,
+    // RevealMarkdown
+         ]
+    },
+
+
+    );
+  </script>
+</body>
+
+</html>
