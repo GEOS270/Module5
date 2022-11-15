@@ -4,9 +4,9 @@ title: Module Quiz
 nav_order: 4
 ---
 
-## Module 4 Quiz
+## Module 5 Quiz
 
-You can submit your answers to these questions via the Module 4 Quiz on Canvas.  Questions are listed here with hyperlinks to the relevant section of the lab if you need help finding answers.
+You can submit your answers to these questions via the Module 5 Quiz on Canvas.  Questions are listed here with hyperlinks to the relevant section of the lab if you need help finding answers.
 
 ## Rubric
 
