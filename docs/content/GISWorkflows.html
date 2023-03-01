@@ -288,7 +288,8 @@ ol ol li.nl::before {
                 <div class="left">
                     <p>Port Alberni has needs a new tsunami evacuation shelter and you have been tasked with finding a suitable location.  The shelter must:</p>
                     <ol>
-                            <li>Outside the flood zone: > 15 m elevation <b>or</b> > 1 km from coast.</li>
+                            <li>Outside the flood zone:</li>
+                            <ul><li>> 15 MASL <b>or</b> > 1 km from coast.</li></ul>
                             <li>&gt; 1.5 km from existing shelters.</li>
                             <li>&lt; 250 m from an Arterial Roadway.</li>
                             <li>Not on Residential, Commercial, or Industrial parcels.</li>
@@ -306,7 +307,12 @@ ol ol li.nl::before {
                     <p>It is best to create a workflow that is repeatable, modifiable, and sharable.</p>
                     <ul>
                         <li>"Point and Click" GIS is not repeatable</li>
-                        <li>This can create a <b>lot</b> of problems when you need to redo or update complex analyses</li>
+                        <li>This can create issues when you:</li>
+                        <ul>
+                          <li>Need to write up a report</li>
+                          <li>Want to share how you completed a task</li>
+                          <li>Have to redo or update complex analyses</li>
+                        </ul>
                     </ul>
                 </div>
                 <div class = "figure">
@@ -324,9 +330,12 @@ ol ol li.nl::before {
                     <p>Model Builder is a good solution for beginners.</p>
                     <ul>
                         <li>It lets you define you analysis steps using a flowchart</li>
-                        <li>Inputs can be run trough sequences of geoprocessing steps</li>
-                        <li>Models are easy to save, update, and re-run</li>
-                        <li>Also helps you visualize your results and share them with others</li>
+                        <ul>
+                          <li>Inputs are run trough the geoprocessing steps</li>
+                          <li>Models are easy to save and update</li>
+                          <li>Can be exported as custom tools</li>
+                        </ul>
+                        <li>Helps you visualize your results and share them with others</li>
                     </ul>
                 </div>
                 <div class = "figure">
@@ -338,53 +347,9 @@ ol ol li.nl::before {
         
         <section>
             <div class="container">
-                <h2 class="header">Visualizing a Workflow</h2>
-                <div class="left">
-                    <p>If you pursue a GIS career, you should consider learning to code.</p>
-                    <ul>
-                        <li>Code is replicable, legible, and even more explicit than a model</li>
-                        <ul>
-                            <li>Models can be exported as Python code for fine tuning</li>
-                            <li>Good way to start learning code</li>
-                        </ul>
-                        <li>Python is a great option for geospatial analysis</li>
-                        <li>Javascript is great for making webmaps</li>
-                    </ul>
-                </div>
-                <div class="r-stack">
-                    <div class = "figure fragment fade-out" data-fragment-index="0">
-                        <br>
-                        <img src="images/Model_Code.png" width="100%" style="border: solid 2px black">
-                    </div>
-                    
-                    <div class = "figure fragment fade-in-then-out" data-fragment-index="0">
-                        <img src="images/Code.png" height="100%" style="border: solid 2px black">
-                    </div>
-
-                    <div class = "figure fragment fade-in" data-fragment-index="1">
-                        <br>
-                        <div style="overflow: hidden;
-                        padding-top: 75.25%;
-                        position: relative">
-                        <iframe src="https://ubc-micromet.github.io/FieldSiteMaps/" title="Processes" scrolling="no" frameborder="0"
-                            style="border: 0;
-                        height: 100%;
-                        left: 0;
-                        position: absolute;
-                        top: 0;
-                        width: 100%;">
-                        </iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
             <h1 class="title">TopHat Question 2</h1>
                 <div class="question">
-                <p>This is useful tool that lets you define your analysis steps using a flowchart and create repeatable workflows.</p>
+                <p>This is useful tool in ArcGIS Pro that lets you define your analysis steps using a flowchart and create repeatable workflows.</p>
                 <ul>
                     <li>Model Builder</li>
                     <li>Geoprocessing</li>
@@ -395,21 +360,67 @@ ol ol li.nl::before {
                 </div>
             </div>
         </section>
+
         
         <section>
-            <div class="container">
-            <h1 class="title">TopHat Question 3</h1>
-                <div class="question">
-                <p>These are programming languages that can be used to for GIS:</p>
-                <ul>
-                    <li>Python</li>
-                    <li>Microsoft Excel</li>
-                    <li>Javascript</li>
-                    <li>ArcGIS Pro</li>
-                </ul>
-                </div>
-            </div>
-        </section>
+          <div class="container">
+              <h2 class="header">Visualizing a Workflow</h2>
+              <div class="left">
+                  <p>If you pursue a GIS career, or any other science, you should consider learning to code.</p>
+                  <ul>
+                      <li>Code is replicable, legible, and even more explicit than a model</li>
+                      <li>Python is a great option for geospatial analysis</li>
+                      <li>Javascript is great for making web based applications and interactive visualizations</li>
+                      <li>R is useful for statistical analysis</li>
+                  </ul>
+              </div>
+              <div class="r-stack">
+                  <div class = "figure fragment fade-out" data-fragment-index="0">
+                      <br>
+                      <img src="images/Model_Code.png" width="100%" style="border: solid 2px black">
+                      <p style="font-size: .75em;">Models can be exported as Python code!</p>
+                  </div>
+                  
+                  <div class = "figure fragment fade-in-then-out" data-fragment-index="0">
+                      <img src="images/Code.png" height="80%" style="border: solid 2px black">
+                      <p style="font-size: .75em;">Javascript can create interactive web maps!</p>
+                  </div>
+
+                  <div class = "figure fragment fade-in" data-fragment-index="1">
+                    <br>
+                    <div style="overflow: hidden;
+                      padding-top: 75.25%;
+                      position: relative">
+                      <iframe src="https://ubc-micromet.github.io/FieldSiteMaps/" title="Processes" scrolling="no" frameborder="0"
+                          style="border: 0;
+                      height: 100%;
+                      left: 0;
+                      position: absolute;
+                      top: 0;
+                      width: 100%;">
+                    </iframe>
+                    </div>
+                    <p style="font-size: .75em;">Javascript can create interactive web maps!</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <section>
+          <div class="container">
+          <h1 class="title">TopHat Question 3</h1>
+              <div class="question">
+              <p>These are programming languages that can be used to for GIS:</p>
+              <ul>
+                  <li>Python</li>
+                  <li>Microsoft Excel</li>
+                  <li>Javascript</li>
+                  <li>ArcGIS Pro</li>
+                  <li>R</li>
+              </ul>
+              </div>
+          </div>
+      </section>
 
 
 
