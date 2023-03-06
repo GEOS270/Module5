@@ -456,6 +456,7 @@ ol ol li.nl::before {
             </div>
         </section>
         
+
         <section>
             <div class="container">
                 <h2 class="header">Buffering</h2>
@@ -467,7 +468,25 @@ ol ol li.nl::before {
                     </ul>
                 </div>
                 <div class = "figure">
-                    <img src="images/buffer.png" width="100%" style="border: solid 2px black">
+                    <p>Example From ESRI Docs</p>
+                    <img src="images/buffer_docs.png" width="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="header">Buffering</h2>
+                <div class="left">
+                    <p>Use the <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/buffer.htm">Buffer</a> tool to create a new Polygon layer based on distance.</p>
+                    <ul>
+                        <li>Buffer points, lines, or polygons using a buffer distance or set a field to specify varriable distance.</li>
+                        <li>Use the <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/multiple-ring-buffer.htm">Multiple Ring Buffer</a> tool for multi-criteria buffers.</li>
+                    </ul>
+                </div>
+                <div class = "figure">
+                    <p>Buffering Tsunami Shelters</p>
+                    <img src="images/buffer.png" width="90%" style="border: solid 2px black">
                 </div>
             </div>
         </section>
@@ -484,7 +503,26 @@ ol ol li.nl::before {
                     </ul>
                 </div>
                 <div class = "figure">
-                    <img src="images/dissolve.png" width="100%" style="border: solid 2px black">
+                    <p>Example From ESRI Docs</p>
+                    <img src="images/dissolve_docs.png" width="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <h2 class="header">Dissolve</h2>
+                <div class="left">
+                    <p><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/dissolve.htm">Dissolve</a> aggregates features.</p>
+                    <ul>
+                        <li>Merges objects completely or by attribute(s).</li>
+                        <li>Can calculate statistics for aggregated regions.</li>
+                        <li>Useful if our data is more "complex" than we need it to be.</li>
+                    </ul>
+                </div>
+                <div class = "figure">
+                    <p>Dissolve Tsunami Shelter Buffers</p>
+                    <img src="images/dissolve.png" width="85%" style="border: solid 2px black">
                 </div>
             </div>
         </section>
@@ -530,10 +568,14 @@ ol ol li.nl::before {
                 </div>
                 <div class="r-stack">
                     <div class = "figure fragment fade-out" data-fragment-index="0">
+                        <p>Example From ESRI Docs</p>
+                        <img src="images/clip_docs.png" width="100%" style="border: solid 2px black">
+                    </div>
+                    <div class = "figure fragment fade-in-then-out" data-fragment-index="0">
                         <p>Input</p>
                         <img src="images/clip_inpt.png" width="100%" style="border: solid 2px black">
                     </div>
-                    <div class = "figure fragment fade-in" data-fragment-index="0">
+                    <div class = "figure fragment fade-in" data-fragment-index="1">
                         <p>Output</p>
                         <img src="images/clip_output.png" width="100%" style="border: solid 2px black">
                     </div>
@@ -556,10 +598,14 @@ ol ol li.nl::before {
                 </div>
                 <div class="r-stack">
                     <div class = "figure fragment fade-out" data-fragment-index="0">
+                        <p>Example From ESRI Docs</p>
+                        <img src="images/erase_docs.png" width="100%" style="border: solid 2px black">
+                    </div>
+                    <div class = "figure fragment fade-in-then-out" data-fragment-index="0">
                         <p>Input</p>
                         <img src="images/clip_inpt.png" width="100%" style="border: solid 2px black">
                     </div>
-                    <div class = "figure fragment fade-in" data-fragment-index="0">
+                    <div class = "figure fragment fade-in" data-fragment-index="1">
                         <p>Output</p>
                         <img src="images/erase.png" width="100%" style="border: solid 2px black">
                     </div>
@@ -581,10 +627,14 @@ ol ol li.nl::before {
                 </div>
                 <div class="r-stack">
                     <div class = "figure fragment fade-out" data-fragment-index="0">
+                        <p>Example From ESRI Docs</p>
+                        <img src="images/intersect_docs.png" width="100%" style="border: solid 2px black">
+                    </div>
+                    <div class = "figure fragment fade-in-then-out" data-fragment-index="0">
                         <p>Input</p>
                         <img src="images/clip_inpt.png" width="100%" style="border: solid 2px black">
                     </div>
-                    <div class = "figure fragment fade-in" data-fragment-index="0">
+                    <div class = "figure fragment fade-in" data-fragment-index="1">
                         <p>Output</p>
                         <img src="images/intersect.png" width="90%" style="border: solid 2px black">
                     </div>
@@ -606,6 +656,20 @@ ol ol li.nl::before {
                             <li>Null values where for new attributes where no overlaps are present.</li>
                         </ul>
                         <li>Useful when we want to merge layers.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <h2 class="header">Union</h2>
+                <div class="full">
+                    <p>Use the <a href="https://desktop.arcgis.com/en/arcmap/latest/tools/analysis-toolbox/union.htm">Union</a> tool to combine multiple layers, split features where they overlap and combine attributes.</p>
+                    <ul>
+                        <li>Similar to intersect, but keeps overlapping areas</li>
+                        <img src="images/intersect_docs.png" width="100%" style="border: solid 2px black">
+                    </ul>
                 </div>
             </div>
         </section>
