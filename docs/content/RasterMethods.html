@@ -210,29 +210,20 @@ ol ol li.nl::before {
 
         <section>
             <div class="container">
-            <h1 class="title">Reading Break Makeup Lab</h1>
-                <div class="question">
-                <p>What time slot would you prefer for a makeup lab session? Not for credit, only answer if you are in Sierra's Wed or Fri Lab, select all that apply</p>
-                <ul>
-                    <li>Monday the 7th 9:00-11:00</li>
-                    <li>Monday the 7th 10:00-12:00</li>
-                    <li>Monday the 7th 15:00-17:00</li>
-                    <li>None of these work for me :(</li>
-                </ul>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-                <h2 class="header">Raster Analysis Methods</h2>
-                <div class="full">
+                <h2 class="header">Clip</h2>
+                <div class="left">
                     <p>Often our data is more "complex" than we need it to be.  It is useful to parse, reclassify, and/or aggregate our data.</p>
                     <ul>
                       <li><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/clip.htm">Clip Raster</a>: cuts raster down to a bounding box.</li>
-                      <ul><li>Max N/S & E/W extent of another layer (vector or raster) or manually defined.</li></ul>
-                      <li><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/reclassify.htm">Reclassify</a>: reassign cell values.</li>
+                      <ul>
+                        <li>Max N/S & E/W extent of another layer (vector or raster) or manually defined.</li>
+                        <li><b>Different tool</b> than vector clipping</li>
+                        </ul>
                     </ul>
+                </div>
+                <div class="right">
+                    <img src="images/clip_raster.gif" width="100%" style="border: solid 2px black">
+                    <p>Raster clipping is similar to vector clipping</p>
                 </div>
             </div>
         </section>
@@ -240,8 +231,40 @@ ol ol li.nl::before {
         
         <section>
             <div class="container">
-                <h2 class="header">Raster Analysis Methods</h2>
-                <div class="full">
+                <h2 class="header">Reclassify</h2>
+                <div class="left">
+                    <p>Often our data is more "complex" than we need it to be.  It is useful to parse, reclassify, and/or aggregate our data.</p>
+                    <ul>
+                      <li><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/reclassify.htm">Reclassify</a>: creates a new output based on a classification scheme.</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <img src="images/Reclassify_1.gif" width="100%" style="border: solid 2px black">
+                    <p>Reassign values or simplify data to reduce data volume</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="header">Reclassify</h2>
+                <div class="left">
+                    <p>Often our data is more "complex" than we need it to be.  It is useful to parse, reclassify, and/or aggregate our data.</p>
+                    <ul>
+                      <li><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/reclassify.htm">Reclassify</a>: creates a new output based on a classification scheme.</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <img src="images/Reclassify_2.gif" width="100%" style="border: solid 2px black">
+                    <p>Reassign values or simplify data to reduce data volume</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <h2 class="header">Mosaic</h2>
+                <div class="left">
                     <p>Often our data is more "complex" than we need it to be.  It is useful to parse, reclassify, and/or aggregate our data.</p>
                     <ul>
                       <li><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/mosaic.htm">Mosaic</a>: Combine multiple raster data sets into one.</li>
@@ -249,18 +272,58 @@ ol ol li.nl::before {
                         <li>There are <a href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/mosaic-operators.htm">multiple approaches</a> we can use.</li>
                       </ul>
                     </ul>
-                    <img src="images/Mosaic.png" width="50%" style="border: solid 2px black">
-
+                </div>
+                <div class="right">
+                    <img src="images/Mosaic.png" width="100%" style="border: solid 2px black">
+                    <p>Often used to merge multiple satellite images</p>
                 </div>
             </div>
         </section>
-              
+
         <section>
             <div class="container">
-                <h2 class="header">Overlay</h2>
+                <h2 class="header">Mosaic</h2>
+                <div class="left">
+                    <p>Often our data is more "complex" than we need it to be.  It is useful to parse, reclassify, and/or aggregate our data.</p>
+                    <ul>
+                      <li><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/mosaic.htm">Mosaic</a>: Combine multiple raster data sets into one.</li>
+                      <ul>
+                        <li>There are <a href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/mosaic-operators.htm">multiple approaches</a> we can use.</li>
+                      </ul>
+                    </ul>
+                </div>
+                <div class="right">
+                    <img src="images/CO_Landsat_Tiles.jpg" width="100%" style="border: solid 2px black">
+                    <p>Often used to merge multiple satellite images</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="header">Proximity Analysis</h2>
+                <div class="left">Sometimes, we're interested in looking at spatial relationships using raster data.</p>
+                    <ul>
+                      <li><a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/euclidean-distance.htm">Euclidean Distance</a>: use this tool to calculate distance from the nearest feature or raster layer.</li>
+                    </ul>
+                </div>
+                <div class = "figure">
+                    <br>
+                    <br>
+                    <img src="images/euc_dist.png" width="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+
+
+                              
+        <section>
+            <div class="container">
+                <h2 class="header">Raster Overlay</h2>
                 <div class="left">
                     <p>When we have multiple raster layers and we want to combine them to form a new output.</p>
                     <ul>
+                        <li>Easy, efficient overlay is a key advantage of the raster data model</li>
                         <li>We have a few tools we can use for this</li>
                     </ul>
                 </div>
@@ -286,26 +349,64 @@ ol ol li.nl::before {
                 </div>
             </div>
         </section>
+        
+        <section>
+            <div class="container">
+                <h2 class="header"><a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/weighted-overlay.htm">Weighted Overlay</a></h2>
+                <div class="left">
+                    <p>Weights inputs for suitability analysis or risk assessment.</p>
+                    <ul>
+                        <li>Inputs must be discrete numbers</li>
+                        <li>Manually define weights and scale</li>
+                    </ul>
+                    
+                <img src="images/Weighted_Overlay2.png" width="100%" style="border: solid 2px black">
+                </div>
+                <div class="figure">
+                    <img src="images/Overlay_out.png" width="100%" style="border: solid 2px black">
+                    <p>Outputs discrete classification.</p>
+                </div>
+            </div>
+        </section>
 
         <section>
             <div class="container">
                 <h2 class="header"><a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/raster-calculator.htm">Raster Calculator</a></h2>
                 <div class="left">
-                    <p>More general than weighted overlay.</p>
+                    <p>More general and flexible than weighted overlay.</p>
                     <ul>
-                        <li>Outputs are more more straightforward</li>
+                        <li>Outputs are more straightforward</li>
                         <ul>
                             <li>Because inputs are more explicit</li>
                         </ul>
-                        <li>Can do weighted overlay</li>
+                        <li>Can do weighted overlay among other tasks</li>
                     </ul>
                 </div>
                 <div class="figure">
-                    <img src="images/RasterCalculator.png" height="100%" style="border: solid 2px black">
+                    <img src="images/RasterCalculator.png" width="100%" style="border: solid 2px black">
                 </div>
             </div>
         </section>
         
+        <section>
+            <div class="container">
+                <h2 class="header"><a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/raster-calculator.htm">Raster Calculator</a></h2>
+                <div class="left">
+                    <p>More general and flexible than weighted overlay.</p>
+                    <ul>
+                        <li>Outputs are more straightforward</li>
+                        <ul>
+                            <li>Because inputs are more explicit</li>
+                        </ul>
+                        <li>Can do weighted overlay among other tasks</li>
+                    </ul>
+                </div>
+                <div class="figure">
+                    <img src="images/Calc_out.png" width="100%" style="border: solid 2px black">
+                    <p>Outputs continuous gradient.</p>
+                </div>
+            </div>
+        </section>
         
         <section>
             <div class="container">
@@ -340,24 +441,8 @@ ol ol li.nl::before {
       
         <section>
             <div class="container">
-                <h2 class="header">Proximity Analysis</h2>
-                <div class="left">Sometimes, we're interested in looking at spatial relationships using raster data.</p>
-                    <ul>
-                      <li><a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/euclidean-distance.htm">Euclidean Distance</a>: use this tool to calculate distance from the nearest feature or raster layer.</li>
-                    </ul>
-                </div>
-                <div class = "figure">
-                    <br>
-                    <br>
-                    <img src="images/euc_dist.png" width="100%" style="border: solid 2px black">
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
                 <h2 class="header">Surface Analysis</h2>
-                <div class="full">
+                <div class="left">
                     <p>These tools are specifically designed to analyze terrain surfaces (ie. Digital Elevation Models).</p>
                     <ul>
                         <li>However, they can be applied to other purposes in select applications</li>
@@ -365,15 +450,33 @@ ol ol li.nl::before {
                         <ul>
                             <li>ie. the angle in degrees from a cell to it's "lowest" neighbor</li>
                         </ul>
+                    </ul>
+                </div>
+                <div class="right">
+                     <img src="images/Slope.png" width="100%" style="border: solid 2px black">
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <h2 class="header">Surface Analysis</h2>
+                <div class="left">
+                    <p>These tools are specifically designed to analyze terrain surfaces (ie. Digital Elevation Models).</p>
+                    <ul>
+                        <li>However, they can be applied to other purposes in select applications</li>
                         <li><b><a href="https://pro.arcgis.com/en/pro-app/latest/help/analysis/raster-functions/aspect-function.htm">Aspect</a></b>: calculates the direction a slope is facing</li>
                         <ul>
                             <li>North, southeast, west northwest, etc.</li>
                         </ul>
                     </ul>
                 </div>
+                <div class="right">
+                     <img src="images/aspect.gif" width="100%" style="border: solid 2px black">
+                </div>
             </div>
         </section>
-        
+
         <section>
             <div class="container">
             <h1 class="title">TopHat Question 2</h1>
@@ -397,7 +500,7 @@ ol ol li.nl::before {
                     </ul>
                 </div>
                 <div class="figure">
-                    <img src="images/Raster_Functions.png" width="100%" style="border: solid 2px black">
+                    <img src="images/Raster_Functions.png" he="100%" style="border: solid 2px black">
                 </div>
             </div>
         </section>
@@ -487,19 +590,6 @@ ol ol li.nl::before {
             </div>
         </section>
         
-        <section>
-            <div class="container">
-            <h1 class="title">TopHat Question 4</h1>
-                <div class="question">
-                <p>What will we be doing in GEOS 270 on Tuesday Nov 8th? (select all that apply)</p>
-                <ul>
-                    <li>Lecture is scheduled as usual</li>
-                    <li>Optional lab help session in room 115</li>
-                    <li>Lecture is cancelled</li>
-                </ul>
-                </div>
-            </div>
-        </section>
         
     </div><!-- .slides -->
 
